@@ -1,2 +1,2 @@
-## Danila aka btfspace
+## Danila (@btfspace)
 ![](background.svg)
