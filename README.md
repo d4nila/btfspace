@@ -1,9 +1,9 @@
 ## Danila (@btfspace)
 ![](background.svg)
 
-- 📍 I'm living in Russia
-- 📚 I'm currently learning C#
-- 🦥 Not looking for job, but open for commissions
+- 📍 i'm living in Russia
+- 📚 i'm currently learning C#
+- 💼 not looking for job, but open for commissions
 - 💰 pls donate me [here](https://www.donationalerts.com/r/btfspace)
 - 💻 and visit my [website](https://biteof.space)
 
