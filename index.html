@@ -137,6 +137,7 @@
 	<p>my name is <span class="accent">Danila</span> aka <span class="accent">d4nila,</span>
 i work at <a href="https://www.flightradar24.com/">flightradar24</a> as a backdev, also have an ADS-B receiver <a href="https://www.flightradar24.com/account/feed-stats/?id=35812">T-UWWW25</a>
 I know such programming languages as: Python, Ruby and JS
+until the holiday of <a href="https://en.wikipedia.org/wiki/Hanukkah">Hanukkah</a> left: <span class="left"></span>
 <a download="superSong.mp3" href="superSong.mp3"><br>*click here to download nice song*</a></p>
 	<h2 id="">====================</h2>
 	<h3>additional info</h3>
@@ -181,5 +182,28 @@ Finally got a call from a girl I wanna dig out</div></div>
 	let age = parseInt(diffInDays / 365);
 	let text = age + `${[' year', ' years', ' years'][age % 100 > 4 && age % 100 < 20 ? 2 : [2, 0, 1, 1, 1, 2][age % 10 < 5 ? age % 10 : 5]]}`;
 	document.getElementsByClassName("ages")[0].textContent = text + " old";
+
+	function toHanukkah() {
+    	var date = new Date(1701942240000);
+    	var now_utc = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(),
+    	            date.getUTCDate(), date.getUTCHours(),
+    	            date.getUTCMinutes(), date.getUTCSeconds());
+    	let hanukkah = new Date(now_utc);
+    	let now = new Date();
+    	let diff = hanukkah - now;
+    	let seconds = Math.round(diff / 1000);
+    	var d = Math.floor(seconds / (3600*24));
+    	var h = Math.floor(seconds % (3600*24) / 3600);
+    	var m = Math.floor(seconds % 3600 / 60);
+    	var s = Math.floor(seconds % 60);
+    	var dDisplay = d > 0 ? d + (d == 1 ? " day, " : " days, ") : "0 days";
+    	var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " hours, ") : "0 hours";
+    	var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " minutes, ") : "0 minutes";
+    	var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "0 seconds";
+    	document.getElementsByClassName("left")[0].textContent = dDisplay + hDisplay + mDisplay + sDisplay;
+	}
+
+	toHanukkah()
+	setInterval(toHanukkah, 1000);
 </script>
 </html>
